@@ -11,7 +11,7 @@ En este laboratorio realizamos la codificacion de una libreria para calcular **o
 - Cartesiano a polares
 - Retornar fase
 
-![Image](https://www.caracteristicass.de/wp-content/uploads/2018/02/caracteristicas-de-los-numeros-complejos-300x197.jpg)
+
 
 Adiciono mi codigo main realizado en python
 
