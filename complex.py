@@ -35,8 +35,7 @@ def modulo(real,imaginario):
     respuesta= ((real**2+imaginario**2)**0.5)
     print(respuesta)
 
-def cartesianas(realA,realB,imaA,imaB):
-    
+
 
 
     
