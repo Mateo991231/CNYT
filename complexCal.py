@@ -30,6 +30,14 @@ def conjugado(real,imaginario):
     else:
         return (real,imaginario)
 
+def adicionVectorial(a,b):
+    if len(a) != len(b):
+        raise 'La suma entre estos 2 vectores no esta definida'
+    answer = []
+    for i in range(len(a)):
+        answer.append(suma(a[i],b[i]))
+    return answer
+
 
 def modulo(real,imaginario):
     respuesta= ((real**2+imaginario**2)**0.5)
@@ -48,3 +56,4 @@ def cartesianoPolar(cartesiano):
 
 def fase(num):
     return math.atan2(num[1],num[0])
+
