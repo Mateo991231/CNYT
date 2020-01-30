@@ -9,11 +9,12 @@ En este laboratorio realizamos la codificacion de una libreria para calcular **o
 - Conjugada
 - Modulo
 - Cartesiano a polares
+- Polar a cartesiano
 - Retornar fase
 
 
 
-Adiciono mi codigo main realizado en python
+Adiciono mi codigo main realizado en python,el codigo main va implementado en caso de querer tener un menu para la ejecucion de la Calculadora de numeros complejos 
 
 
 ```
@@ -51,3 +52,7 @@ main()
 ```
 
 
+ ![image](https://cdn.pixabay.com/photo/2015/11/15/07/47/geometry-1044090_960_720.jpg) 
+ 
+ 
+ Foto creada por https://pixabay.com/es/users/geralt-9301/
