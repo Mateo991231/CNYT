@@ -20,6 +20,10 @@ class TestCases(unittest.TestCase):
        self.assertEqual(complexCal.cartesianoPolar((3,4)),(9765625, 53.13010235415598))
     def test_deberiaRetornarFaseComplejo(self):
        self.assertEqual(complexCal.fase((10,5)),0.4636476090008061)
+    def test_deberiaSumarVector(self):
+       self.assertEqual(complexCal.sumaVector(([(2,3),(3,2)]),([(2,5),(3,2)])),[(4, 8), (6, 4)])
+    def test_deberiaMultiplicarEscalar(self):
+        self.assertEqual(complexCal. productoVectorEscalar((5,3),([(2,5),(3,2)])),[(-5, 31), (9, 19)])
     
 if __name__=="__main__":
     unittest.main()

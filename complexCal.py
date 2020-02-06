@@ -68,5 +68,25 @@ def cartesianoPolar(cartesiano):
 def fase(num):
     return math.atan2(num[1],num[0])
 
+def sumaVector(a,b):
+    par = []
+    for i in range (len (a)):
+        res = suma(a[i],b[i])
+        par.append(res)
+    return (par)
 
+def productoVectorEscalar(a,b):
+    array = []
+    for i in range (len (b)):
+        array.append(multiplicacion(a,b[i]))
+    return (array)
+
+
+def productoTensor (a,b):
+     for i in range (len(a)):
+          res=[]
+          for j in range (len(b)):
+               res.append(multiplicacion(a[i],b[j]))
+          a[i]=res
+     return a
 
