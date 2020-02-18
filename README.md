@@ -51,6 +51,19 @@ def main():
 main()
 ```
 
+##Test
+
+Para la comprension de la libreria fueron implementadas algunas pruebas sobre cada una de las funciones de la calculadora, si estas no indican un error significa que la implementacion y ejecucuion de las funciones es correcta.
+
+Un ejemplo del codigo de la  implementacion de las pruebas es el siguiente:
+
+```
+class TestCases(unittest.TestCase):
+    def test_DeberiaSumar(self):
+        self.assertEqual(complexCal.suma((-3,-2),(7,-2)),(4, -4))
+
+```
+lo que indica es que se va a realizar la prueba de los dos siguientes numeros complejos: (-3-2i),(7-2i) y el resultado es (4-4i)
 
  ![image](https://cdn.pixabay.com/photo/2015/11/15/07/47/geometry-1044090_960_720.jpg) 
  
