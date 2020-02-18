@@ -51,7 +51,7 @@ def main():
 main()
 ```
 
-##Test
+## Test
 
 Para la comprension de la libreria fueron implementadas algunas pruebas sobre cada una de las funciones de la calculadora, si estas no indican un error significa que la implementacion y ejecucuion de las funciones es correcta.
 
