@@ -63,7 +63,16 @@ class TestCases(unittest.TestCase):
         self.assertEqual(complexCal.suma((-3,-2),(7,-2)),(4, -4))
 
 ```
-lo que indica es que se va a realizar la prueba de los dos siguientes numeros complejos: (-3-2i),(7-2i) y el resultado es (4-4i)
+lo que indica es que se va a realizar la prueba de los dos siguientes numeros complejos: (-3-2i),(7-2i) y el resultado es (4-4i).
+para cada una de las funciones implementadas en la libreria hay una prueba que muestra la correcta implementacion de esta.
+
+
+
+
+## ¿Para que la importancia de la calculadora de complejos en el mundo cuantico ?
+
+La razon es sencilla y es debido a que todo el mundo cuantico esta represantado por qBits, y estos qBits los podemos representar usando numeros complejos y cualquier variedad de operaciones que podemos hacer sobre ellos , operaciones matriciales,vectoriales y basicas como las que son implementadas en esta calculadora cuantica.
+
 
  ![image](https://cdn.pixabay.com/photo/2015/11/15/07/47/geometry-1044090_960_720.jpg) 
  
