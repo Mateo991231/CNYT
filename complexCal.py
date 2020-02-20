@@ -125,8 +125,8 @@ def escalarMat(mat1,mat2):
     for i in range(len(mat1)):
         respuesta=[]
         for j in range(len(mat1)):
-            res.append(productoEscalar(mat1[i][j],mat2))
-    aux.append[res]
+            respuesta.append(productoVectorEscalar(mat1[i][j],mat2))
+    aux.append[respuesta]
     return aux
 
 def productoInternoVec(vec1,vec2):
