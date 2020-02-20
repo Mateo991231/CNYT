@@ -55,11 +55,6 @@ class TestCases(unittest.TestCase):
         b=([(2,3),(3,2)])
         self.assertEqual(complexCal.distancia (a,b),[0.0, 0])
         
-
-    """def test_deberiaCalcularNormaVec(self):
-        a=([(2,3),(3,2)])
-        self.assertEqual(complexCal.norma(a),[0.0, 0])"""
-        
     def test_deberiaserHermitiana(self):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
         self.assertEqual(complexCal.hermitiana(a),False)
