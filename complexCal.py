@@ -111,7 +111,7 @@ def inversaMatriz(mat):
         respuesta.append(aux)
     return respuesta
 
-def sumaDeMatrices(mat1,mat2):
+def sumaMatrices(mat1,mat2):
     respuesta=[]
     for i in range(len(mat1)):
         aux=[]
@@ -136,7 +136,7 @@ def productoInternoVec(vec1,vec2):
         for i in range(len(vec1)):
            aux.append(multiplicacion(vec1[i],vec2[i]))
            respuesta = suma(respuesta,aux[i])
-    return(res)
+    return(respuesta)
 def transpuesta(mat1):
     respuesta=[]
     for i in range(len(mat1[0])):
@@ -156,7 +156,7 @@ def conjugada(mat1):
     return respuesta
 
 
-def adjunta(a):
+def adjunta(mat1):
     return (conjugada(transpuesta(mat1)))
 
 

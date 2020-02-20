@@ -33,7 +33,28 @@ class TestCases(unittest.TestCase):
     def test_deberiaHacersumaMat (self):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
         b=([[(2,2),(3,3)],[(2,2),(3,3)]])
-        self.assertEqual(complexCal.sumaDeMatrices(a,b),[[(4, 7), (11, 6)], [(3, 4), (7, 6)]])
+        self.assertEqual(complexCal.sumaMatrices(a,b),[[(4, 7), (11, 6)], [(3, 4), (7, 6)]])
+    def test_deberiaHacerProductoInternovec(self):
+        a=([(2,3),(3,2)])
+        b=([(2,3),(3,2)])
+        self.assertEqual(complexCal.productoInternoVec (a,b), (0, 24))
+    def test_deberiaHacerTranspuesta(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        self.assertEqual(complexCal.transpuesta (a), [[(2, 5), (1, 2)], [(8, 3), (4, 3)]])
+    def test_deberiaHacerConjugada(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        self.assertEqual(complexCal.conjugada (a), [[(2, 5), (8, 3)], [(1, 2), (4, 3)]] )
+        
+    def test_deberiaHacerAdjunta(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        self.assertEqual(complexCal.adjunta(a), [[(2, 5), (1, 2)], [(8, 3), (4, 3)]] )
+    
+    def test_deberiaMultiMatriz(self):
+        a=([(2,3),(3,2)])
+        b=([(2,3),(3,2)])
+        self.assertEqual(complexCal.multiMat(a,b), (0, 24))
+
+
          
 if __name__=="__main__":
     unittest.main()
