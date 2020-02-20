@@ -167,8 +167,8 @@ def multiMat(mat1,mat2):
         for j in range(len(mat2[0])):
             aux2 = (0,0)
             for k in range(len(mat2)):
-                res= multiplicacion(mat1[i][k],mat2[k][j])
-                aux2= suma(sumas,aux) 
+                s= multiplicacion(mat1[i][k],mat2[k][j])
+                aux2= suma(s,aux2) 
             aux1.append(aux2)
         respuesta.append(aux1)
     return (respuesta)
@@ -192,16 +192,16 @@ def distancia(vec1,vec2):
 def norma(vec1):
     res = [0,0]
     for i in range(len(vec1)):
-        res = suma(solucion,potencia(vec1[i]))
+        res = suma(res,potencia(vec1[i]))
     res[0]=res[0]**0.5
     return(res)
 
 
-def esUnaHermitiana(mat):
+def hermitiana(mat):
     return mat == adjunta(mat)
 
 
-def esUnaUnitaria(mat):
+def unitaria(mat):
     array=[[(float(0),float(0)) for w in range(len(mat))]for j in range(len(mat))]
     for k in range(len(array)):
         array[k][k] = (float(1),float(0))
@@ -209,20 +209,22 @@ def esUnaUnitaria(mat):
 
 
 
-def productoInternoMatrices(m1,m2):
-    adj = adjunta(m1)
-    aux = multiplicacionMatices(adj,m2)
-    res = (0,0)
+def productoInternoMatrices(mat1,mat2):
+    adjunto = adjunta(mat1)
+    aux = multiMat(adjunto,mat2)
+    respuesta = (0,0)
+
     for i in range(len (aux)):
-        res = suma(res,aux[i][i])
-    return modulo(res)
+        respuesta = suma(respuesta,aux[i][i])
+    return modulo(respuesta)
+
 
 def tensorMatrices(mat1,mat2):
     respuesta=[]
     for i in range(len(mat1)):
         for j in range(len(mat2)):
-             sol.append(productoTensor(mat1[i],mat2[j]))
-    return sol
+             respuesta.append(productoTensor(mat1[i],mat2[j]))
+    return respuesta
 
 
 def normaMatriz (mat):

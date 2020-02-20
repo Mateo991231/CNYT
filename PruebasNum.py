@@ -40,7 +40,8 @@ class TestCases(unittest.TestCase):
         self.assertEqual(complexCal.productoInternoVec (a,b), (0, 24))
     def test_deberiaHacerTranspuesta(self):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
-        self.assertEqual(complexCal.transpuesta (a), [[(2, 5), (1, 2)], [(8, 3), (4, 3)]])
+        self.assertEqual(complexCal.transpuesta (a), [[(2, 5), (1, 2)], [(8, 3), (4, 3
+                                                                                  )]])
     def test_deberiaHacerConjugada(self):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
         self.assertEqual(complexCal.conjugada (a), [[(2, 5), (8, 3)], [(1, 2), (4, 3)]] )
@@ -48,12 +49,47 @@ class TestCases(unittest.TestCase):
     def test_deberiaHacerAdjunta(self):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
         self.assertEqual(complexCal.adjunta(a), [[(2, 5), (1, 2)], [(8, 3), (4, 3)]] )
-    
 
+    def test_deberiaCalcularDistancia(self):
+        a=([(2,3),(3,2)])
+        b=([(2,3),(3,2)])
+        self.assertEqual(complexCal.distancia (a,b),[0.0, 0])
+        
+
+    """def test_deberiaCalcularNormaVec(self):
+        a=([(2,3),(3,2)])
+        self.assertEqual(complexCal.norma(a),[0.0, 0])"""
+        
+    def test_deberiaserHermitiana(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        self.assertEqual(complexCal.hermitiana(a),False)
+
+    def test_deberiaserUnitaria(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        self.assertEqual(complexCal.unitaria(a),False)
+
+    def test_deberiaMultiMat(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        b=([[(2,2),(3,3)],[(2,2),(3,3)]])
+        self.assertEqual(complexCal.multiMat(a,b), [[(4, 36), (6, 54)], [(0, 20), (0, 30)]] )
+
+    def test_deberiaHacerProductoInteroMat(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        b=([[(2,2),(3,3)],[(2,2),(3,3)]])
+        self.assertEqual(complexCal.productoInternoMatrices(a,b), 74.67261881037788 )
+
+    def test_deberiaHacernormaMatriz(self):
+        a=([[(2,5),(8,3)],[(1,2),(4,3)]])
+        self.assertEqual(complexCal.normaMatriz(a), 10.161066675951027 )
         
 
 
+   
          
+    
+    
+
+                 
 if __name__=="__main__":
     unittest.main()
 
