@@ -49,10 +49,8 @@ class TestCases(unittest.TestCase):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
         self.assertEqual(complexCal.adjunta(a), [[(2, 5), (1, 2)], [(8, 3), (4, 3)]] )
     
-    def test_deberiaMultiMatriz(self):
-        a=([(2,3),(3,2)])
-        b=([(2,3),(3,2)])
-        self.assertEqual(complexCal.multiMat(a,b), (0, 24))
+
+        
 
 
          
