@@ -24,6 +24,16 @@ class TestCases(unittest.TestCase):
        self.assertEqual(complexCal.sumaVector(([(2,3),(3,2)]),([(2,5),(3,2)])),[(4, 8), (6, 4)])
     def test_deberiaMultiplicarEscalar(self):
         self.assertEqual(complexCal. productoVectorEscalar((5,3),([(2,5),(3,2)])),[(-5, 31), (9, 19)])
+    def test_deberiaHacerProductoTensor(self):
+        self.assertEqual(complexCal.productoTensor(([(2,3),(3,2)]),([(2,5),(3,2)])),[[(-11, 16), (0, 13)], [(-4, 19), (5, 12)]])
+    def test_deberiaHacerInversoVector(self):
+        self.assertEqual(complexCal.inversoVector(([(2,3),(3,2)])),[(-2, -3), (-3, -2)])
+    def test_deberiaHacerInversoMatriz(self):
+        self.assertEqual(complexCal.inversaMatriz(([[(2,2),(3,3)],[(2,2),(3,3)]])),[[(-2, -2), (-3, -3)], [(-2, -2), (-3, -3)]])
+    def test_deberiaHacersumaMat (self):
+        a=([[(2,2),(3,3)],[(2,2),(3,3)]])
+        b=([[(2,2),(3,3)],[(2,2),(3,3)]])
+        self.assertEqual(complexCal.sumaDeMatrices(a,b),[[(4, 4), (6, 6)], [(4, 4), (6, 6)]])
     
 if __name__=="__main__":
     unittest.main()

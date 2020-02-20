@@ -90,14 +90,16 @@ def productoTensor (a,b):
           a[i]=res
      return a
     
-def opuesto(a):
-    ar=a[0]*-1
-    br=a[1]*-1
+def opuesto(val):
+    primero=val[0]*-1
+    segundo=val[1]*-1
+    return (primero,segundo)
+    
 
 def inversoVector(vec):
     respuesta=[]
     for i in range(len(vec)):
-        res.append(opuesto(vec[i]))
+        respuesta.append(opuesto(vec[i]))
     return respuesta
 
 def inversaMatriz(mat):
@@ -105,8 +107,8 @@ def inversaMatriz(mat):
     for i in range(len(mat)):
         aux=[]
         for j in range(len(mat)):
-            res.append(opuesto(mat[i][j]))
-        respuesta.append(res)
+            aux.append(opuesto(mat[i][j]))
+        respuesta.append(aux)
     return respuesta
 
 def sumaDeMatrices(mat1,mat2):
