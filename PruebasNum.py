@@ -77,14 +77,16 @@ class TestCases(unittest.TestCase):
         a=([[(2,5),(8,3)],[(1,2),(4,3)]])
         self.assertEqual(complexCal.normaMatriz(a), 10.161066675951027 )
         
-
-
+    def test_probabilidad(self):
+        self.assertEqual(complexCal.proba(2,[(7,5),(2,3),(1,2)]),15.48100641346688)
+    def test_transicion(self):
+        a=[(7,5),(5,2),(4,2)]
+        b=[(7,5),(2,3),(1,2)]
+        self.assertEqual(complexCal.ampli(a,b),(98.0, -17.0))
+    
    
          
-    
-    
-
-                 
+                     
 if __name__=="__main__":
     unittest.main()
 

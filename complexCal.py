@@ -208,7 +208,14 @@ def unitaria(mat):
     return multiMat(mat,adjunta(mat)) == multiMat(adjunta(mat),mat) == array
 
 
-
+def multiplicacionVec(vect1,vect2):
+    respuesta=[]
+    if len(vect1)==len(vect2):
+        final=(0,0)
+        for i in range(len(vect1)):
+            final=suma(final,multi(vect1[i],vect2[i]))
+        return final
+   
 def productoInternoMatrices(mat1,mat2):
     adjunto = adjunta(mat1)
     aux = multiMat(adjunto,mat2)
@@ -229,4 +236,26 @@ def tensorMatrices(mat1,mat2):
 
 def normaMatriz (mat):
     return productoInternoMatrices(mat,mat)**0.5
+
+def modulovec(vec):
+    res=0
+    for i in vec:
+        res+=modulo(i)
+    return res
+
+
+
+#EJERCICIO SISTEMA CUANTICO DE PARTICULA EN UNA LINEA #
+
+def proba(posicion,vec):
+    modulos=modulo(vec[posicion])
+    moduloVectorial=modulovec(vec)
+    probabilidadPunto=(modulos/moduloVectorial)*100
+    return probabilidadPunto
+
+
+def ampli(vec1,vec2):
+    tran=adjunta(vec2)
+    respuesta=multiplicacionVec(tran,vec1)
+    return respuesta
 
